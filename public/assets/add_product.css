@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+
+* {
+    font-family: 'Fredoka';
+}
+
+.flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-add-header {
+    font-size: 30px;
+    border-bottom: 3px solid #333333;
+}
+
+#save-product-btn, #cancel-btn {
+    padding: 5px 9px;
+    text-transform: uppercase;
+    background: #fff;
+    color: #333333;
+    border: 2px solid #333333;
+}
+
+#save-product-btn {
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+#cancel-btn a {
+    color: #333333;
+}
+
+.product-add-header , .product-list_footer , .add-product {
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    padding: 25px 15px;
+}
+.add-product {
+    height: 81vh;
+    overflow-y: hidden;
+}
+
+.product-inputs {
+    width: fit-content;
+}
+
+.product-inputs > div {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-bottom: 15px;
+}
+
+.product-type-switcher {
+    margin-top: 3rem;
+}
+
+.type-switcher-label {
+    margin-right: 1.5rem;
+}
+
+#product_type {
+    padding: 3px 7px;
+}
+
+.products {
+    margin-top: 2rem;
+}
+
+.dvd, .furniture, .book {
+    width: fit-content;
+    padding: 15px;
+    border: 2px solid #333333;
+}
+
+.furniture > div{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.description {
+    margin-top: 1rem;
+}
+
+.product-list_footer {
+    border-top: 3px solid #333333;
+    text-align: center;
+}
+
+.errors {
+    color: #ff0000;
+    font-size: 12px;
+}

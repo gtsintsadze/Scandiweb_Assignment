@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+
+* {
+    font-family: 'Fredoka';
+}
+
+.main-content-list , .product-list_footer{
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    padding: 25px 0;
+}
+
+.product-list-header header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #333333;
+}
+
+.product-list-header .product-list-title {
+    font-size: 30px;
+}
+
+#delete-product-btn, #add-product-btn {
+    padding: 5px 9px;
+    text-transform: uppercase;
+    background: #fff;
+    color: #333333;
+    border: 2px solid #333333;
+}
+
+#delete-product-btn {
+    cursor: pointer;
+}
+
+#add-product-btn {
+    margin-right: 25px;
+}
+
+#add-product-btn a {
+    color: #333333;
+}
+
+.product-list-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+    padding-top: 30px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.product-list-content::-webkit-scrollbar {
+    display: none;
+}
+
+.product-list-content .product-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 11rem;
+    padding: 15px;
+    border: 3px solid #333333;
+}
+
+.product-box .product-box-content {
+    margin: auto;
+    padding: 20px 0;
+}
+
+.product-box-content div {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+
+.product-list_footer  {
+    border-top: 3px solid #333333;
+}
+
+.product-list_footer p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.empty-product-msg {
+    /*display: none;*/
+    justify-content:  center;
+    align-items: center;
+    padding-top: 30px;
+    font-size: 25px;
+}

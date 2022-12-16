@@ -2,10 +2,6 @@
 
 abstract class AbstractRepository extends Database
 {
-    /**
-     * @param AbstractProduct $product
-     * @return void
-     */
     protected function createProduct(AbstractProduct $product): void
     {
         $sql = "INSERT INTO product(sku, name, price, type_id) VALUES (:sku, :name, :price, :type_id)";
@@ -18,10 +14,6 @@ abstract class AbstractRepository extends Database
         ]);
     }
 
-    /**
-     * @param $tableName
-     * @return array
-     */
     public function getCollection($tableName): array
     {
         $sql = "SELECT * FROM $tableName JOIN product p ON ($tableName.product_id = p.product_id)";
@@ -60,10 +52,6 @@ abstract class AbstractRepository extends Database
         return $collection;
     }
 
-    /**
-     * @param AbstractProduct $product
-     * @return void
-     */
     public function create(AbstractProduct $product): void
     {
         $tableName = strtolower(get_class($product));
@@ -81,12 +69,7 @@ abstract class AbstractRepository extends Database
         $statement->execute($properties);
     }
 
-    /**
-     * @param array $data
-     * @param $key
-     * @return void
-     */
-    public function massDelete(array $data, $key): void
+    public function massDelete(array $data, $key)
     {
         $in  = str_repeat('?,', count($data) - 1) . '?';
         $sql = "DELETE FROM product WHERE $key IN ($in)";
@@ -94,11 +77,7 @@ abstract class AbstractRepository extends Database
         $statement->execute($data);
     }
 
-    /**
-     * @param $type
-     * @return mixed
-     */
-    protected function getTypeId($type): mixed
+    protected function getTypeId($type)
     {
         $sql = "SELECT type_id FROM product_types WHERE product_name = ?";
         $statement = $this->prepare($sql);

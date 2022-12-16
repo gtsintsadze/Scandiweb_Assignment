@@ -23,11 +23,7 @@ class Model
         unset($this->data[$key]);
     }
 
-    /**
-     * @param $key
-     * @return mixed
-     */
-    public function getData($key = null): mixed
+    public function getData($key = null)
     {
         if ($key === null) {
             return $this->data;

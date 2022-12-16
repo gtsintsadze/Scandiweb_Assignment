@@ -3,7 +3,7 @@
 function dbCredentials(): array
 {
     return [
-        'database' => 'test',
+        'database' => 'products',
         'username' => 'root',
         'password' => 'password',
         'servername' => 'localhost'
